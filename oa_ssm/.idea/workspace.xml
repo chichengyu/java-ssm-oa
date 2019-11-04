@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="086bb8a1-65e2-4ae0-9073-ba361c82e29b" name="Default Changelist" comment="" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="localRepository" value="D:\reps" />
+        <option name="userSettingsFile" value="D:\web\apache-maven-3.6.2\conf\settings.xml" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="MavenRunner">
+    <option name="vmOptions" value="-DarchetypeCatalog=internal" />
+  </component>
+  <component name="ProjectId" id="1T8u0trjOfoFAY6jJizuZ6Y2dFS" />
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/oa_dao/src/main/java/cn/xiaochi/ssm/global" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="reference.settings.project.maven.runner" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Administrator\Desktop\java\oa_ssm\oa_dao\src\main\java\cn\xiaochi\ssm\global" />
+      <recent name="C:\Users\Administrator\Desktop\java\oa_ssm\oa_web\src\main\webapp" />
+      <recent name="C:\Users\Administrator\Desktop\java\oa_ssm\oa_web\src\main\webapp\WEB-INF" />
+      <recent name="C:\Users\Administrator\Desktop\java\oa_ssm\oa_web\src\main\resources" />
+      <recent name="C:\Users\Administrator\Desktop\java\oa_ssm\oa_biz\src\main\resources" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Administrator\Desktop\java\oa_ssm\oa_dao\src\main\resources" />
+      <recent name="C:\Users\Administrator\Desktop\java\oa_ssm\oa_web\src\main\resources" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="086bb8a1-65e2-4ae0-9073-ba361c82e29b" name="Default Changelist" comment="" />
+      <created>1572853823881</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1572853823881</updated>
+      <workItem from="1572853826214" duration="190000" />
+      <workItem from="1572854028201" duration="183000" />
+      <workItem from="1572854223067" duration="384000" />
+      <workItem from="1572854688298" duration="2380000" />
+      <workItem from="1572857090740" duration="5720000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+</project>

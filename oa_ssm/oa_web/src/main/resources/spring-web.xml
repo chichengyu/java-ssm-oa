@@ -1,0 +1,38 @@
+﻿<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:mvc="http://www.springframework.org/schema/mvc"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd
+    http://www.springframework.org/schema/mvc
+    http://www.springframework.org/schema/mvc/spring-mvc.xsd">
+
+    <!-- ****** web层配置： 静态资源地址、试图转换器、springMVC加载 ****** -->
+
+    <!-- 引入 spring-biz.xml -->
+    <import resource="spring-biz.xml"/>
+    <!-- 开启自动扫描 -->
+    <context:component-scan base-package="cn.xiaochi.ssm.controller"/>
+    <!-- 控制器有很多其他注解，需要开启 mvc 的注解驱动 -->
+    <mvc:annotation-driven/>
+    <!-- 开启 servlet，静态资源交给 servlet 处理（如：图片、静态页面） -->
+    <mvc:default-servlet-handler/>
+
+    <!-- 视图转换器 -->
+    <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+        <!-- 视图按什么格式什么规则转换 -->
+        <property name="viewClass" value="org.springframework.web.servlet.view.JstlView"/>
+        <property name="prefix" value="/WEB-INF/pages"/>
+        <property name="suffix" value="*.jsp"/>
+    </bean>
+
+<!--    <mvc:interceptors>-->
+<!--        <mvc:interceptor>-->
+<!--            <mvc:mapping path="/**"/>-->
+<!--            <bean class="com.imooc.oa.global.LoginInterceptor"/>-->
+<!--        </mvc:interceptor>-->
+<!--    </mvc:interceptors>-->
+
+</beans>

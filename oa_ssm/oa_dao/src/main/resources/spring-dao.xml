@@ -1,0 +1,36 @@
+﻿<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd">
+
+    <!-- ****** dao层配置： 数据源、Session工厂、映射 ****** -->
+
+    <!-- 开启自动扫描 -->
+    <context:component-scan base-package="cn.xiaochi.ssm.dao"/>
+
+    <!-- 加载 db.property 文件 -->
+    <context:property-placeholder location="classpath:db.properties"/>
+    <!-- 配置数据源 -->
+    <bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+        <property name="driverClassName" value="${jdbc.driver}" />
+        <property name="url" value="${jdbc.url}"/>
+        <property name="username" value="${jdbc.username}"/>
+        <property name="password" value="${jdbc.password}"/>
+    </bean>
+    <!-- 配置 SqlSessionFactory 工厂 -->
+    <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+        <property name="dataSource" ref="dataSource"/>
+        <!-- 配置别名 -->
+        <property name="typeAliasesPackage" value="cn.xiaochi.ssm.dao"/>
+    </bean>
+
+    <!-- 映射器接口(自动调用) -->
+    <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+        <property name="sqlSessionFactoryBeanName" value="cn.xiaochi.ssm.dao"/>
+        <!-- 扫描配置的映射文件与dao接口文件 -->
+        <property name="basePackage" value="com.imooc.oa.dao"/>
+    </bean>
+</beans>

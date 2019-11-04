@@ -1,0 +1,46 @@
+﻿<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xmlns:tx="http://www.springframework.org/schema/tx"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd
+    http://www.springframework.org/schema/aop
+    http://www.springframework.org/schema/aop/spring-aop.xsd
+    http://www.springframework.org/schema/tx
+    http://www.springframework.org/schema/tx/spring-tx.xsd">
+
+    <!-- ****** 业务层配置： 事务 ****** -->
+
+    <!-- 可能会用 spring-dao.xml，引入进来 -->
+    <import resource="spring-dao.xml"/>
+    <!-- 开启自动扫描 -->
+    <context:component-scan base-package="cn.xiaochi.ssm.biz"/>
+    <!-- aop自动代理打开 -->
+    <aop:aspectj-autoproxy/>
+
+    <!-- 申明式事务管理器 -->
+    <bean id="transationManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+        <!-- 使用 spring-dao.xml 文件中配置的数据源 -->
+        <property name="dataSource" value="dataSource"/>
+    </bean>
+    <!-- 申明通知 -->
+    <tx:advice id="txAdvice" transaction-manager="transationManager">
+        <tx:attributes>
+            <!-- 指定aop切入点里那些方法需要过滤，不需要事务去封装 -->
+            <tx:method name="get*" read-only="true"/>
+            <tx:method name="find*" read-only="true"/>
+            <!-- 其他方法强制开启事务封装 -->
+            <tx:method name="*" propagation="REQUIRED"/>
+        </tx:attributes>
+    </tx:advice>
+    <!-- 把通知与切入点关联起来 -->
+    <aop:config>
+        <!-- execution(任何返回值 cn.xiaochi.ssm.biz包下的 任何类 的 任何方法 的 任何参数) 都回根据 txAdvice 的规则进行过滤 -->
+        <aop:pointcut id="txpc" expression="execution(* cn.xiaochi.ssm.biz.*.*(..))"/>
+        <!-- 关联 -->
+        <aop:advisor advice-ref="txAdvice" pointcut-ref="txpc"/>
+    </aop:config>
+</beans>
