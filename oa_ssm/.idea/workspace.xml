@@ -30,7 +30,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/oa_dao/src/main/java/cn/xiaochi/ssm/global" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/oa_dao/src/main/java/cn/xiaochi/ssm/entity" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -38,11 +38,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Administrator\Desktop\java\oa_ssm\oa_dao\src\main\java\cn\xiaochi\ssm\entity" />
       <recent name="C:\Users\Administrator\Desktop\java\oa_ssm\oa_dao\src\main\java\cn\xiaochi\ssm\global" />
       <recent name="C:\Users\Administrator\Desktop\java\oa_ssm\oa_web\src\main\webapp" />
       <recent name="C:\Users\Administrator\Desktop\java\oa_ssm\oa_web\src\main\webapp\WEB-INF" />
       <recent name="C:\Users\Administrator\Desktop\java\oa_ssm\oa_web\src\main\resources" />
-      <recent name="C:\Users\Administrator\Desktop\java\oa_ssm\oa_biz\src\main\resources" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Administrator\Desktop\java\oa_ssm\oa_dao\src\main\resources" />
@@ -75,7 +75,7 @@
       <workItem from="1572854028201" duration="183000" />
       <workItem from="1572854223067" duration="384000" />
       <workItem from="1572854688298" duration="2380000" />
-      <workItem from="1572857090740" duration="5720000" />
+      <workItem from="1572857090740" duration="6371000" />
     </task>
     <servers />
   </component>

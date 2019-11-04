@@ -24,13 +24,13 @@
     <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
         <property name="dataSource" ref="dataSource"/>
         <!-- 配置别名 -->
-        <property name="typeAliasesPackage" value="cn.xiaochi.ssm.dao"/>
+        <property name="typeAliasesPackage" value="cn.xiaochi.ssm.entity"/>
     </bean>
 
     <!-- 映射器接口(自动调用) -->
     <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
-        <property name="sqlSessionFactoryBeanName" value="cn.xiaochi.ssm.dao"/>
+        <property name="sqlSessionFactoryBeanName" value="sqlSessionFactory"/>
         <!-- 扫描配置的映射文件与dao接口文件 -->
-        <property name="basePackage" value="com.imooc.oa.dao"/>
+        <property name="basePackage" value="cn.xiaochi.ssm.dao"/>
     </bean>
 </beans>
